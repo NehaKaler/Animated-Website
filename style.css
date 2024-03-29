@@ -15,11 +15,24 @@ html,body{
     width: 100%;
 }
 
+body{
+    background-color: #F7F7F7;
+}
+
+#cursor{
+    height: 150px;
+    width: 150px;
+    background-color: blanchedalmond;
+    position: fixed;
+    border-radius: 50%;
+    transform: translate(-50%,-50%) scale(0);
+}
+
 #page1{
     min-height: 100vh;
     position: relative;
     width: 100%;
-    padding-top: 19vw;
+    padding-top: 19vh;
     padding: 0 1vw;
 }
 
@@ -49,7 +62,7 @@ html,body{
 
 #video-container #play{
     text-transform: uppercase;
-    padding: 3vh 2vh;
+    padding: 3vw 2vw;
     border-radius: 50%;
     text-align: center;
     position: fixed;
@@ -62,7 +75,7 @@ html,body{
 }
 
 #page2{
-    height: 100vh;
+    min-height: 100vh;
     width: 100%;
     position: relative;
     display: flex;
@@ -75,6 +88,7 @@ html,body{
     height: 100%;
     width: 31%;
     overflow: hidden;
+    position: relative;
 }
 
 #page2 .elem img{
@@ -84,17 +98,70 @@ html,body{
     scale: 1.1;
 }
 
+#page2 .elem .dets{
+    height: 50px;
+    width: 70%;
+    border-radius: 50px;
+    display: flex;
+    position: relative;
+    vertical-align: middle;
+    align-items: center;
+    justify-content: center;
+    background-color: pink;
+    z-index: 9;
+    top: 100%;
+    left: 15%; 
+    transform: translate(-50%,-50%);
+    word-wrap: break-word;
+}
+
+#page2 .elem .dets:hover{
+    height: 200px;
+}
+
+#page2 .elem .dets .dot{
+    align-items: flex-start;
+    padding-left: 0;
+}
+
+#page2 .elem .dets .shop{
+    align-items: center;
+}
+
+#page2 .elem .dets .word{
+    justify-content: center;
+    align-items: end;
+}
+
 #page3{
-    height: 100vh;
+    min-height: 120vh;
     width: 100%;
-    background-color: grey;
+    position: relative;
+    display: flex ;
+    align-items: center;
+    justify-content: space-evenly;
+    flex-wrap: wrap;
+}
+
+.child{
+    height: 55vh;
+    width: 40vw;
+    position: relative;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+}
+
+.child img{
+    height: 100%;
 }
 
 @media (max-width:600px){
 
     #page1{
+        min-height: 70vh;
         width: 100%;
-        padding-top: 25vw;
+        padding-top: 25vh;
         padding: 0 3vw;
     }
 
@@ -114,17 +181,79 @@ html,body{
     }
 
     #video-container #play{
-        text-transform: uppercase;
-        padding: 3vh 2vh;
-        border-radius: 50%;
-        text-align: center;
-        position: fixed;
-        background-color: black;
-        color: white;
-        font-size: 4vw;
-        font-family: futura;
-        opacity: 0;
-        scale: 0;
+        padding: 9.5vw 7.2vw;
+        position: absolute;
+        top: 50%;
+        left: 50%;
+        font-size: 4.5vw;
+        opacity: 1;
+        scale: 1;
+        transform: translate(-50%,-50%);
     }
 
+    #page2{
+        min-height: 100vh;
+        width: 100%;
+        position: relative;
+        display: flex;
+        align-items: center; 
+        flex-direction: column;
+        padding: 5vw 3vw;
+        justify-content: space-between;
+    }
+    
+    #page2 .elem{
+        height: 100vh;
+        width: 100%;
+        overflow: hidden;
+        margin-bottom: 3vw;
+    }
+    
+    #page2 .elem img{
+        height: 100%;
+        width: 100%;
+        object-fit: cover;
+        scale: 1.1;
+    }
+    
+    #page3{
+        height: 100vh;
+        width: 100%;
+        background-color: grey;
+    }
+
+    #page2 .elem .dets{
+        height: 50px;
+        width: 70%;
+        border-radius: 50px;
+        display: flex;
+        position: absolute;
+        vertical-align: middle;
+        align-items: center;
+        justify-content: center;
+        background-color: pink;
+        z-index: 9;
+        top: 100%;
+        left: 15%; 
+        transform: translate(-50%,-50%);
+        word-wrap: break-word;
+    }
+    
+    #page2 .elem .dets:hover{
+        height: 200px;
+    }
+    
+    #page2 .elem .dets .dot{
+        align-items: flex-start;
+        padding-left: 0;
+    }
+    
+    #page2 .elem .dets .shop{
+        align-items: center;
+    }
+    
+    #page2 .elem .dets .word{
+        justify-content: center;
+        align-items: end;
+    }
 }
